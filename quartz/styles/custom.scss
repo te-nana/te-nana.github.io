@@ -1,3 +1,153 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+.page-title,
+.page-title a {
+  font-family: "DotGothic16", var(--headerFont) !important;
+  color: var(--dark) !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+}
+
+a.internal {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid currentColor;
+}
+
+footer {
+  display: none;
+}
+
+.wall {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 2rem 0 5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.wall::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: #e3d3b8;
+}
+
+.wall a.w,
+.wall .w {
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 10px !important;
+  background: #b9b3a6;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 0 !important;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.wall > .w:nth-child(4n + 1) { margin-top: 10px; }
+.wall > .w:nth-child(4n + 2) { margin-top: 96px; }
+.wall > .w:nth-child(4n + 3) { margin-top: 36px; }
+.wall > .w:nth-child(4n + 4) { margin-top: 0; }
+
+.wall .seed { width: 56px; height: 56px; font-size: 0.7rem; }
+.wall .young { width: 110px; height: 140px; }
+.wall .grown { width: 170px; height: 210px; font-size: 1rem; }
+
+.wall .red { background: #e8432e; }
+.wall .yellow { background: #f2c230; color: #3a2e05 !important; }
+.wall .blue { background: #2340d8; }
+.wall .green { background: #2f6b3a; }
+.wall .photo { background: #b9b3a6; }
+.wall .paper {
+  background: #ffffff;
+  color: #1c1b19 !important;
+  border: 0.5px solid #d8d4cb;
+}
+
+.wall .odd {
+  position: absolute;
+  top: 38%;
+  left: 42%;
+  width: 88px;
+  height: 88px;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  background: #f29cb8;
+  color: #5a1830 !important;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-12deg);
+  font-family: "DotGothic16", var(--bodyFont);
+  z-index: 2;
+}
+
+.wall a.w {
+  background-color: #b9b3a6 !important;
+  border-bottom: none !important;
+}
+.wall a.w.red { background-color: #e8432e !important; }
+.wall a.w.yellow { background-color: #f2c230 !important; }
+.wall a.w.blue { background-color: #2340d8 !important; }
+.wall a.w.green { background-color: #2f6b3a !important; }
+.wall a.w.photo { background-color: #b9b3a6 !important; }
+.wall a.w.paper {
+  background-color: #ffffff !important;
+  border: 0.5px solid #d8d4cb !important;
+}
+
+.wall a.w.yellow { color: #3a2e05 !important; }
+.wall .seed { font-size: 0 !important; padding: 0 !important; }
+.wall .w.empty,
+.wall a.w.empty {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 1px dashed #b9b3a6 !important;
+}
+
+.wall {
+  column-gap: 3% !important;
+  row-gap: 32px !important;
+}
+.wall .seed {
+  width: 6.5% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+}
+.wall .young {
+  width: 13% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+}
+.wall .grown {
+  width: 20% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+}
+.wall .odd {
+  width: 9% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+}
+.wall > .w:nth-child(4n + 1) { margin-top: 1% !important; }
+.wall > .w:nth-child(4n + 2) { margin-top: 9% !important; }
+.wall > .w:nth-child(4n + 3) { margin-top: 3.5% !important; }
+.wall > .w:nth-child(4n + 4) { margin-top: 0 !important; }
+
+@media (max-width: 800px) {
+  .wall .seed { width: 12% !important; }
+  .wall .young { width: 26% !important; }
+  .wall .grown { width: 38% !important; }
+  .wall .odd { width: 16% !important; }
+}
